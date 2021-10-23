@@ -1,0 +1,34 @@
+{
+  "name": "fe-config",
+  "version": "0.0.1",
+  "homepage": "",
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "tsc && cross-env VITE_BUILD_MODE=dev vite build",
+    "build:test": "tsc && cross-env VITE_BUILD_MODE=test vite build",
+    "build:prod": "tsc && cross-env VITE_BUILD_MODE=prod vite build",
+    "preview": "npm run build:prod && vite preview",
+    "prepare": "husky install .husky",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "npm run lint:jsFix && npm run lint:styleFix && npm run lint:format",
+    "lint:jsFix": "eslint --ext .jsx,.js,.ts,.tsx --fix ./src",
+    "lint:format": "prettier --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,less,md,json}\"",
+    "lint:styleFix": "stylelint --fix ./src/**/*?\\(.module\\).{css,less} ",
+    "type-check": "tsc",
+    "deploy": "npm run build:dev && gh-pages -d dist"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json}": "prettier --write"
+  }
+}
