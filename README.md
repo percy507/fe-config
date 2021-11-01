@@ -28,6 +28,8 @@ typescript                                # 为 javascript 提供强大的类型
 # vite
 vite                                      # 一种新型前端构建工具
 vite-plugin-style-import                  # 用于组件库，按需加载组件样式
+@vitejs/plugin-legacy                     # 为打包后的文件提供传统浏览器兼容性支持
+@vitejs/plugin-react                      # 提供完整的 React 支持
 
 # git钩子、格式化代码
 husky                                     # 一款简化使用 git hook 的工具
