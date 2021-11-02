@@ -8,6 +8,9 @@ module.exports = {
   rules: {
     'block-no-empty': null,
     'no-empty-source': null,
+    'color-function-notation': ['legacy'],
+    'selector-id-pattern': null,
+    'selector-class-pattern': null,
     'selector-pseudo-class-no-unknown': [
       true,
       {
