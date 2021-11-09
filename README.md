@@ -17,6 +17,14 @@
 "preinstall": "npx only-allow pnpm",    // only allow pnpm
 ```
 
+```jsonc
+// 为一些工具定义支持的浏览器
+"browserslist": [
+  "> 1%",           // 全球使用率大于1%的浏览器
+  "last 2 versions" // 每个浏览器中最新的两个版本
+]
+```
+
 ### 相关依赖介绍
 
 ```bash
@@ -59,6 +67,10 @@ stylelint-config-prettier                 # 禁用非必要的以及与 prettier
 
 # markdownlint
 markdownlint                              # 校验 markdown 文档
+
+# postcss
+autoprefixer                              # 基于caniuse.com，自动补全浏览器私有前缀
+postcss-pxtorem                           # 基于配置的参数，自动转换CSS px 单位为rem
 ```
 
 ### 安装依赖
@@ -103,3 +115,8 @@ pnpm add -D \
 > 1. vscode 的 eslint 扩展: 高亮异常代码、保存代码自动修复代码
 > 2. vite 的 eslint 插件: 支持在 devServer 终端输出 eslint 的警告、错误信息，以及强制用户必须修复 eslint 错误才能继续开发
 > 3. lint-staged 的自定义逻辑: 在 commit 代码前使用 eslint 校验、修复代码
+
+### 参考
+
+- [PostCSS 自学笔记（二）【插件篇】](https://segmentfault.com/a/1190000010934375)
+- [PostCSS 常用插件与语法介绍](https://juejin.cn/post/6844903812440784910)

@@ -20,6 +20,10 @@
   "dependencies": {},
   "devDependencies": {},
   "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",

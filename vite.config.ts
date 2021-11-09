@@ -6,6 +6,9 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import styleImport from 'vite-plugin-style-import';
 
+import autoprefixer from 'autoprefixer';
+import px2rem from 'postcss-pxtorem';
+
 import { dependencies } from './package.json';
 import checkVscodeExtension from './plugins/check-vscode-extension';
 import eslintPlugin from './plugins/vite-plugin-eslint';
@@ -68,6 +71,21 @@ export default defineConfig({
     modules: {
       scopeBehaviour: 'local',
       generateScopedName: '[local]_[hash:base64:6]',
+    },
+    postcss: {
+      plugins: [
+        autoprefixer(),
+        px2rem({
+          rootValue: 100,
+          unitPrecision: 5,
+          propList: ['*'],
+          selectorBlackList: [],
+          replace: true,
+          mediaQuery: false,
+          minPixelValue: 0,
+          // exclude: /node_modules/i,
+        }),
+      ],
     },
     preprocessorOptions: {
       less: {
