@@ -106,8 +106,7 @@ pnpm add -D \
   stylelint-config-standard \
   stylelint-order \
   stylelint-config-rational-order \
-  stylelint-config-prettier \
-  @types/stylelint
+  stylelint-config-prettier
 ```
 
 ### 自定义 vite 插件或逻辑
