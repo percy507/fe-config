@@ -23,6 +23,12 @@
   "> 1%",           // 全球使用率大于1%的浏览器
   "last 2 versions" // 每个浏览器中最新的两个版本
 ]
+
+// declear the engines version
+"engines": {
+  "node": ">=14",
+  "pnpm": ">=6"
+}
 ```
 
 ### 相关依赖介绍
